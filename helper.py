@@ -9,8 +9,32 @@ from aggregate import (
     get_variance,
     get_correlation
 )
+from statistical_tests import test_normality
 import numpy as np
 import pandas as pd
+import json
+
+import json
+
+
+def _json_default(value):
+    """Convert common NumPy and pandas types into JSON-compatible values."""
+    if value is pd.NA or value is pd.NaT:
+        return None
+
+    if hasattr(value, "tolist"):
+        return value.tolist()
+
+    if hasattr(value, "item"):
+        return value.item()
+
+    if hasattr(value, "isoformat"):
+        return value.isoformat()
+
+    raise TypeError(
+        f"Object of type {type(value).__name__} is not JSON serializable"
+    )
+
 
 def collect_dataset_metrics(
     df,
@@ -20,10 +44,23 @@ def collect_dataset_metrics(
     alpha=0.05,
     encoding="utf-8",
     include_normality=True,
-    correlation_methods=("pearson", "spearman", "kendall")
+    correlation_methods=("pearson", "spearman", "kendall"),
+    *,
+    stat_file
 ):
     """
     Collect all currently implemented dataset metrics.
+
+    Args:
+        df: Input pandas DataFrame.
+        stat_file: Path to the JSON file where the metrics are stored.
+        columns: Columns for which metrics should be collected.
+        correlation_pairs: Column pairs for which correlations are calculated.
+        mcv_n: Number of most common values to collect per column.
+        alpha: Significance level for normality tests.
+        encoding: Encoding used for entry size calculations.
+        include_normality: Whether to perform normality tests.
+        correlation_methods: Correlation methods to apply.
 
     Returns:
         dict: Nested dictionary containing dataset,
@@ -131,19 +168,19 @@ def collect_dataset_metrics(
                 df, column
             )
 
-            # # Normality test
-            # if include_normality:
-            #     try:
-            #         column_metrics["normality"] = test_normality(
-            #             df, column, alpha=alpha
-            #         )
-            #     except (ValueError, TypeError) as error:
-            #         column_metrics["normality"] = {
-            #             "tested": False,
-            #             "reason": str(error)
-            #         }
-            # else:
-            #     column_metrics["normality"] = None
+            # Normality test
+            if include_normality:
+                try:
+                    column_metrics["normality"] = test_normality(
+                        df, column, alpha=alpha
+                    )
+                except (ValueError, TypeError) as error:
+                    column_metrics["normality"] = {
+                        "tested": False,
+                        "reason": str(error)
+                    }
+            else:
+                column_metrics["normality"] = None
 
         else:
             column_metrics["average"] = None
@@ -175,6 +212,16 @@ def collect_dataset_metrics(
                 if pd.notna(correlation)
                 else None
             )
+
+    # Write aggregated metrics to JSON file
+    with open(stat_file, "w", encoding="utf-8") as file:
+        json.dump(
+            metrics,
+            file,
+            indent=4,
+            ensure_ascii=False,
+            default=_json_default
+        )
 
     return metrics
 

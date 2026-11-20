@@ -1,0 +1,511 @@
+{
+    "dataset": {
+        "row_count": 539383,
+        "column_count": 8,
+        "total_null_count": 53938,
+        "overall_null_ratio": 0.012499930476118084
+    },
+    "columns": {
+        "Airline": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 18,
+            "most_common_values": [
+                {
+                    "value": 15,
+                    "count": 94097
+                },
+                {
+                    "value": 5,
+                    "count": 60940
+                },
+                {
+                    "value": 12,
+                    "count": 50254
+                },
+                {
+                    "value": 1,
+                    "count": 45656
+                },
+                {
+                    "value": 10,
+                    "count": 36605
+                },
+                {
+                    "value": 14,
+                    "count": 34500
+                },
+                {
+                    "value": 16,
+                    "count": 31126
+                },
+                {
+                    "value": 6,
+                    "count": 27983
+                },
+                {
+                    "value": 13,
+                    "count": 27619
+                },
+                {
+                    "value": 4,
+                    "count": 21118
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 2,
+                "average_bytes": 1.5572218627580032
+            },
+            "range": {
+                "minimum": 0,
+                "maximum": 17
+            },
+            "average": 9.334526672142058,
+            "variance": 28.15753710048172,
+            "normality": {
+                "statistic": 32466627.690747898,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "Flight": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 6585,
+            "most_common_values": [
+                {
+                    "value": 16,
+                    "count": 420
+                },
+                {
+                    "value": 5,
+                    "count": 407
+                },
+                {
+                    "value": 9,
+                    "count": 401
+                },
+                {
+                    "value": 8,
+                    "count": 396
+                },
+                {
+                    "value": 62,
+                    "count": 364
+                },
+                {
+                    "value": 371,
+                    "count": 357
+                },
+                {
+                    "value": 28,
+                    "count": 355
+                },
+                {
+                    "value": 12,
+                    "count": 354
+                },
+                {
+                    "value": 511,
+                    "count": 350
+                },
+                {
+                    "value": 55,
+                    "count": 343
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 4,
+                "average_bytes": 3.6340318474998283
+            },
+            "range": {
+                "minimum": 1,
+                "maximum": 7814
+            },
+            "average": 2427.9286295637794,
+            "variance": 4274266.129797664,
+            "normality": {
+                "statistic": 55694.60504690956,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "AirportFrom": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 293,
+            "most_common_values": [
+                {
+                    "value": 16,
+                    "count": 34449
+                },
+                {
+                    "value": 208,
+                    "count": 24822
+                },
+                {
+                    "value": 80,
+                    "count": 22154
+                },
+                {
+                    "value": 79,
+                    "count": 19843
+                },
+                {
+                    "value": 154,
+                    "count": 16657
+                },
+                {
+                    "value": 135,
+                    "count": 15821
+                },
+                {
+                    "value": 217,
+                    "count": 15557
+                },
+                {
+                    "value": 85,
+                    "count": 13136
+                },
+                {
+                    "value": 153,
+                    "count": 11918
+                },
+                {
+                    "value": 253,
+                    "count": 11786
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 3,
+                "average_bytes": 2.628608984710308
+            },
+            "range": {
+                "minimum": 0,
+                "maximum": 292
+            },
+            "average": 144.11632179731285,
+            "variance": 6301.148825392381,
+            "normality": {
+                "statistic": 388410.01508424437,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "AirportTo": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 293,
+            "most_common_values": [
+                {
+                    "value": 16,
+                    "count": 34440
+                },
+                {
+                    "value": 208,
+                    "count": 24871
+                },
+                {
+                    "value": 80,
+                    "count": 22153
+                },
+                {
+                    "value": 79,
+                    "count": 19848
+                },
+                {
+                    "value": 154,
+                    "count": 16656
+                },
+                {
+                    "value": 135,
+                    "count": 15819
+                },
+                {
+                    "value": 217,
+                    "count": 15558
+                },
+                {
+                    "value": 85,
+                    "count": 13146
+                },
+                {
+                    "value": 153,
+                    "count": 11918
+                },
+                {
+                    "value": 253,
+                    "count": 11792
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 3,
+                "average_bytes": 2.628942699343509
+            },
+            "range": {
+                "minimum": 0,
+                "maximum": 292
+            },
+            "average": 144.14316172367316,
+            "variance": 6296.920312867058,
+            "normality": {
+                "statistic": 386233.65229092166,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "DayOfWeek": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 7,
+            "most_common_values": [
+                {
+                    "value": 4,
+                    "count": 91445
+                },
+                {
+                    "value": 3,
+                    "count": 89746
+                },
+                {
+                    "value": 5,
+                    "count": 85248
+                },
+                {
+                    "value": 1,
+                    "count": 72769
+                },
+                {
+                    "value": 2,
+                    "count": 71340
+                },
+                {
+                    "value": 7,
+                    "count": 69879
+                },
+                {
+                    "value": 6,
+                    "count": 58956
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 1,
+                "average_bytes": 1.0
+            },
+            "range": {
+                "minimum": 1,
+                "maximum": 7
+            },
+            "average": 3.929667787082648,
+            "variance": 3.6659396812848177,
+            "normality": {
+                "statistic": 213959.49626406215,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "Time": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 1131,
+            "most_common_values": [
+                {
+                    "value": 360,
+                    "count": 10784
+                },
+                {
+                    "value": 420,
+                    "count": 6644
+                },
+                {
+                    "value": 390,
+                    "count": 4279
+                },
+                {
+                    "value": 480,
+                    "count": 4058
+                },
+                {
+                    "value": 450,
+                    "count": 3804
+                },
+                {
+                    "value": 540,
+                    "count": 3723
+                },
+                {
+                    "value": 510,
+                    "count": 3700
+                },
+                {
+                    "value": 1020,
+                    "count": 3459
+                },
+                {
+                    "value": 660,
+                    "count": 3319
+                },
+                {
+                    "value": 990,
+                    "count": 3158
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 4,
+                "average_bytes": 3.285298201834318
+            },
+            "range": {
+                "minimum": 10,
+                "maximum": 1439
+            },
+            "average": 802.7289625368245,
+            "variance": 77309.52852193834,
+            "normality": {
+                "statistic": 134817.73768252973,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "Length": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_ratio": 0.0,
+            "distinct_values": 426,
+            "most_common_values": [
+                {
+                    "value": 80,
+                    "count": 13339
+                },
+                {
+                    "value": 70,
+                    "count": 13086
+                },
+                {
+                    "value": 65,
+                    "count": 11894
+                },
+                {
+                    "value": 85,
+                    "count": 11840
+                },
+                {
+                    "value": 75,
+                    "count": 11813
+                },
+                {
+                    "value": 90,
+                    "count": 9807
+                },
+                {
+                    "value": 60,
+                    "count": 9440
+                },
+                {
+                    "value": 95,
+                    "count": 9233
+                },
+                {
+                    "value": 125,
+                    "count": 8873
+                },
+                {
+                    "value": 110,
+                    "count": 8755
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 3,
+                "average_bytes": 2.61082199476068
+            },
+            "range": {
+                "minimum": 0,
+                "maximum": 655
+            },
+            "average": 132.20200673732765,
+            "variance": 4916.3958762952925,
+            "normality": {
+                "statistic": 146583.8207435704,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        },
+        "Delay": {
+            "dtype": "float64",
+            "null_count": 53938,
+            "null_ratio": 0.09999944380894467,
+            "distinct_values": 485445,
+            "most_common_values": [
+                {
+                    "value": 852213751959.5748,
+                    "count": 1
+                },
+                {
+                    "value": 852182566195.7413,
+                    "count": 1
+                },
+                {
+                    "value": 852448694001.9231,
+                    "count": 1
+                },
+                {
+                    "value": 852194817808.1726,
+                    "count": 1
+                },
+                {
+                    "value": 311917914407.8102,
+                    "count": 1
+                },
+                {
+                    "value": 311774757427.023,
+                    "count": 1
+                },
+                {
+                    "value": 852448745934.1992,
+                    "count": 1
+                },
+                {
+                    "value": 852273386360.9236,
+                    "count": 1
+                },
+                {
+                    "value": 852346081190.4708,
+                    "count": 1
+                },
+                {
+                    "value": 852276880005.083,
+                    "count": 1
+                }
+            ],
+            "entry_size": {
+                "maximum_bytes": 18,
+                "average_bytes": 17.118345023638106
+            },
+            "range": null,
+            "average": 552593749740.7745,
+            "variance": 7.214067699216618e+22,
+            "normality": {
+                "statistic": 1704183.4162486328,
+                "p_value": 0.0,
+                "is_normal": false
+            }
+        }
+    },
+    "correlations": {
+        "AirportFrom__AirportTo": {
+            "pearson": 0.015138896176252564,
+            "spearman": 0.017623165579591878,
+            "kendall": 0.011882350929434828
+        },
+        "Delay__Length": {
+            "pearson": 0.04121392027575333,
+            "spearman": 0.030683881173899193,
+            "kendall": 0.020531620040803517
+        }
+    }
+}
