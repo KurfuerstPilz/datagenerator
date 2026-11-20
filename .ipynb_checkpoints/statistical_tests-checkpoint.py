@@ -1,5 +1,6 @@
 from scipy import stats
-from scipy.stats import ks_2samp
+from scipy.stats import ks_2samp, wasserstein_distance
+from typing import NamedTuple
 import pandas as pd
 import numpy as np
 
@@ -69,3 +70,38 @@ def ks_test(
         print("Result: No significant difference detected.")
 
     return result
+
+def wasserstein_test(
+    file_a,
+    file_b,
+    column_a,
+    column_b=None
+):
+    # Load datasets
+    df_a = pd.read_csv(file_a)
+    df_b = pd.read_csv(file_b)
+
+    if column_b is None:
+        column_b = column_a
+
+    # Extract numerical observations and remove missing values
+    sample_a = pd.to_numeric(
+        df_a[column_a], errors="coerce"
+    ).dropna()
+
+    sample_b = pd.to_numeric(
+        df_b[column_b], errors="coerce"
+    ).dropna()
+
+    if len(sample_a) == 0 or len(sample_b) == 0:
+        raise ValueError("Both columns must contain numerical values.")
+
+    # Calculate Wasserstein distance
+    distance = wasserstein_distance(
+        sample_a,
+        sample_b
+    )
+
+    print(f"Wasserstein distance: {distance:.6f}")
+
+    return distance
