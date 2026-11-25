@@ -139,7 +139,7 @@
             "distinct_values": 4190,
             "most_common_values": [
                 {
-                    "value": 216.0412281320561,
+                    "value": 216.04122813205606,
                     "count": 1079
                 },
                 {
@@ -171,7 +171,7 @@
                     "count": 928
                 },
                 {
-                    "value": 80.66557685749979,
+                    "value": 80.66557685749981,
                     "count": 916
                 },
                 {
@@ -181,13 +181,13 @@
             ],
             "entry_size": {
                 "maximum_bytes": 20,
-                "average_bytes": 17.541874697571114
+                "average_bytes": 17.554235116790853
             },
             "range": null,
             "average": 144.11632179731285,
-            "variance": 6301.148825392383,
+            "variance": 6301.148825392381,
             "normality": {
-                "statistic": 29609.999430251522,
+                "statistic": 29609.999430251337,
                 "p_value": 0.0,
                 "is_normal": false
             }
@@ -439,55 +439,55 @@
             "distinct_values": 485445,
             "most_common_values": [
                 {
-                    "value": 852213751959.5748,
+                    "value": 17146901901618.133,
                     "count": 1
                 },
                 {
-                    "value": 852182566195.7413,
+                    "value": 17146274430831.646,
                     "count": 1
                 },
                 {
-                    "value": 852448694001.9231,
+                    "value": 17151629035090.914,
                     "count": 1
                 },
                 {
-                    "value": 852194817808.1726,
+                    "value": 17146520938466.639,
                     "count": 1
                 },
                 {
-                    "value": 311917914407.8102,
+                    "value": 6275920644809.944,
                     "count": 1
                 },
                 {
-                    "value": 311774757427.023,
+                    "value": 6273040265679.086,
                     "count": 1
                 },
                 {
-                    "value": 852448745934.1992,
+                    "value": 17151630079990.322,
                     "count": 1
                 },
                 {
-                    "value": 852273386360.9236,
+                    "value": 17148101771049.451,
                     "count": 1
                 },
                 {
-                    "value": 852346081190.4708,
+                    "value": 17149564421831.814,
                     "count": 1
                 },
                 {
-                    "value": 852276880005.083,
+                    "value": 17148172064650.729,
                     "count": 1
                 }
             ],
             "entry_size": {
                 "maximum_bytes": 18,
-                "average_bytes": 17.118345023638106
+                "average_bytes": 17.303173377004605
             },
             "range": null,
-            "average": 552593749740.7745,
-            "variance": 7.214067699216618e+22,
+            "average": 11118420462552.21,
+            "variance": 2.920481530132035e+25,
             "normality": {
-                "statistic": 1704183.4162486328,
+                "statistic": 1704183.4162486335,
                 "p_value": 0.0,
                 "is_normal": false
             }
@@ -495,12 +495,12 @@
     },
     "correlations": {
         "AirportFrom__AirportTo": {
-            "pearson": 0.6000000000000002,
+            "pearson": 0.6,
             "spearman": 0.5826545089517701,
             "kendall": 0.4127972262561696
         },
         "Delay__Length": {
-            "pearson": 0.04121392027575333,
+            "pearson": 0.04121392027575329,
             "spearman": 0.030683881173899193,
             "kendall": 0.020531620040803517
         }
