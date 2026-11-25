@@ -133,64 +133,61 @@
             }
         },
         "AirportFrom": {
-            "dtype": "int64",
+            "dtype": "float64",
             "null_count": 0,
             "null_ratio": 0.0,
-            "distinct_values": 293,
+            "distinct_values": 4190,
             "most_common_values": [
                 {
-                    "value": 16,
-                    "count": 34449
+                    "value": 216.0412281320561,
+                    "count": 1079
                 },
                 {
-                    "value": 208,
-                    "count": 24822
+                    "value": 237.02990519983942,
+                    "count": 1077
                 },
                 {
-                    "value": 80,
-                    "count": 22154
+                    "value": 181.73511455799832,
+                    "count": 982
                 },
                 {
-                    "value": 79,
-                    "count": 19843
+                    "value": 165.83460162785946,
+                    "count": 951
                 },
                 {
-                    "value": 154,
-                    "count": 16657
+                    "value": 210.16037962042253,
+                    "count": 935
                 },
                 {
-                    "value": 135,
-                    "count": 15821
+                    "value": 229.02898829752064,
+                    "count": 935
                 },
                 {
-                    "value": 217,
-                    "count": 15557
+                    "value": 157.02073617665184,
+                    "count": 928
                 },
                 {
-                    "value": 85,
-                    "count": 13136
+                    "value": 157.23274301572036,
+                    "count": 928
                 },
                 {
-                    "value": 153,
-                    "count": 11918
+                    "value": 80.66557685749979,
+                    "count": 916
                 },
                 {
-                    "value": 253,
-                    "count": 11786
+                    "value": 50.34859887070165,
+                    "count": 915
                 }
             ],
             "entry_size": {
-                "maximum_bytes": 3,
-                "average_bytes": 2.628608984710308
+                "maximum_bytes": 20,
+                "average_bytes": 17.541874697571114
             },
-            "range": {
-                "minimum": 0,
-                "maximum": 292
-            },
+            "range": null,
             "average": 144.11632179731285,
-            "variance": 6301.148825392381,
+            "variance": 6301.148825392383,
             "normality": {
-                "statistic": 388410.01508424437,
+                "statistic": 29609.999430251522,
                 "p_value": 0.0,
                 "is_normal": false
             }
@@ -498,9 +495,9 @@
     },
     "correlations": {
         "AirportFrom__AirportTo": {
-            "pearson": 0.015138896176252564,
-            "spearman": 0.017623165579591878,
-            "kendall": 0.011882350929434828
+            "pearson": 0.6000000000000002,
+            "spearman": 0.5826545089517701,
+            "kendall": 0.4127972262561696
         },
         "Delay__Length": {
             "pearson": 0.04121392027575333,
